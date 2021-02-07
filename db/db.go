@@ -70,7 +70,6 @@ func InsertUser(m *tb.Message) error {
 }
 
 func connDB() *pgx.Conn {
-	//url := "postgres://pahijagrkuygtu:cb5d57616624bb5b6548e6b3ef202376119a3504b0049158424b19f0aff3dc67@ec2-52-205-3-3.compute-1.amazonaws.com:5432/dbb6mku8d18n1v"
 	conn, err := pgx.Connect(context.Background(), os.Getenv("DATABASE_URL"))
 	if err != nil {
 		log.Fatalf("Error connecting to database: %v", err)
